@@ -2,9 +2,6 @@
 
 **ReviewBot** is a powerful, locally-hosted tool that leverages Large Language Models (LLMs) to provide intelligent, automated code reviews for your Pull Requests. It supports **GitCode** and **GitHub**, integrating seamlessly into your workflow to catch bugs, improve code quality, and ensure best practices.
 
-![ReviewBot Dashboard](frontend/public/favicon.svg)
-*(Replace with actual screenshot)*
-
 ## ✨ Features
 
 *   **Multi-Platform Support**: Seamlessly review PRs/MRs from **GitCode** and **GitHub**.
