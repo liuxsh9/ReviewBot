@@ -1,0 +1,19 @@
+# Backend
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+backend/*.log
+backend/*.pid
+backend/reviewbot.db
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/*.log
+frontend/*.pid
+
+# IDE
+.vscode/
+.idea/
+.DS_Store

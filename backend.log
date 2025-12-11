@@ -1,0 +1,145 @@
+INFO:     Will watch for changes in these directories: ['/Users/lxs/Documents/Project/ReviewBot/backend']
+INFO:     Uvicorn running on http://0.0.0.0:8101 (Press CTRL+C to quit)
+INFO:     Started reloader process [31284] using StatReload
+INFO:     Started server process [31330]
+INFO:     Waiting for application startup.
+2025-12-10 15:33:16,254 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-10 15:33:16,254 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("review_executions")
+2025-12-10 15:33:16,254 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-12-10 15:33:16,255 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52602 - "GET /health HTTP/1.1" 200 OK
+2025-12-10 15:39:07,145 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-10 15:39:07,151 INFO sqlalchemy.engine.Engine SELECT review_executions.id, review_executions.pr_url, review_executions.status, review_executions.result, review_executions.metadata_json, review_executions.created_at 
+FROM review_executions ORDER BY review_executions.created_at DESC
+2025-12-10 15:39:07,151 INFO sqlalchemy.engine.Engine [generated in 0.00029s] ()
+INFO:     127.0.0.1:54552 - "GET /api/reviews HTTP/1.1" 200 OK
+2025-12-10 15:39:07,160 INFO sqlalchemy.engine.Engine ROLLBACK
+2025-12-10 15:39:07,394 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-10 15:39:07,394 INFO sqlalchemy.engine.Engine SELECT review_executions.id, review_executions.pr_url, review_executions.status, review_executions.result, review_executions.metadata_json, review_executions.created_at 
+FROM review_executions ORDER BY review_executions.created_at DESC
+2025-12-10 15:39:07,394 INFO sqlalchemy.engine.Engine [cached since 0.244s ago] ()
+INFO:     127.0.0.1:54552 - "GET /api/reviews HTTP/1.1" 200 OK
+2025-12-10 15:39:07,396 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:54552 - "GET /api/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54735 - "OPTIONS /api/reviews/8 HTTP/1.1" 200 OK
+2025-12-10 15:39:40,660 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-10 15:39:40,662 INFO sqlalchemy.engine.Engine SELECT review_executions.id, review_executions.pr_url, review_executions.status, review_executions.result, review_executions.metadata_json, review_executions.created_at 
+FROM review_executions 
+WHERE review_executions.id = ?
+2025-12-10 15:39:40,662 INFO sqlalchemy.engine.Engine [generated in 0.00025s] (8,)
+2025-12-10 15:39:40,665 INFO sqlalchemy.engine.Engine DELETE FROM review_executions WHERE review_executions.id = ?
+2025-12-10 15:39:40,665 INFO sqlalchemy.engine.Engine [generated in 0.00020s] (8,)
+2025-12-10 15:39:40,667 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     127.0.0.1:54735 - "DELETE /api/reviews/8 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54735 - "OPTIONS /api/reviews/7 HTTP/1.1" 200 OK
+2025-12-10 15:39:42,389 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-10 15:39:42,390 INFO sqlalchemy.engine.Engine SELECT review_executions.id, review_executions.pr_url, review_executions.status, review_executions.result, review_executions.metadata_json, review_executions.created_at 
+FROM review_executions 
+WHERE review_executions.id = ?
+2025-12-10 15:39:42,390 INFO sqlalchemy.engine.Engine [cached since 1.728s ago] (7,)
+2025-12-10 15:39:42,392 INFO sqlalchemy.engine.Engine DELETE FROM review_executions WHERE review_executions.id = ?
+2025-12-10 15:39:42,392 INFO sqlalchemy.engine.Engine [cached since 1.727s ago] (7,)
+2025-12-10 15:39:42,393 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     127.0.0.1:54735 - "DELETE /api/reviews/7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54735 - "OPTIONS /api/reviews/6 HTTP/1.1" 200 OK
+2025-12-10 15:39:43,991 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-10 15:39:43,991 INFO sqlalchemy.engine.Engine SELECT review_executions.id, review_executions.pr_url, review_executions.status, review_executions.result, review_executions.metadata_json, review_executions.created_at 
+FROM review_executions 
+WHERE review_executions.id = ?
+2025-12-10 15:39:43,991 INFO sqlalchemy.engine.Engine [cached since 3.33s ago] (6,)
+2025-12-10 15:39:43,992 INFO sqlalchemy.engine.Engine DELETE FROM review_executions WHERE review_executions.id = ?
+2025-12-10 15:39:43,992 INFO sqlalchemy.engine.Engine [cached since 3.327s ago] (6,)
+2025-12-10 15:39:43,992 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     127.0.0.1:54735 - "DELETE /api/reviews/6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54735 - "OPTIONS /api/reviews/5 HTTP/1.1" 200 OK
+2025-12-10 15:39:45,876 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-10 15:39:45,876 INFO sqlalchemy.engine.Engine SELECT review_executions.id, review_executions.pr_url, review_executions.status, review_executions.result, review_executions.metadata_json, review_executions.created_at 
+FROM review_executions 
+WHERE review_executions.id = ?
+2025-12-10 15:39:45,876 INFO sqlalchemy.engine.Engine [cached since 5.215s ago] (5,)
+2025-12-10 15:39:45,878 INFO sqlalchemy.engine.Engine DELETE FROM review_executions WHERE review_executions.id = ?
+2025-12-10 15:39:45,878 INFO sqlalchemy.engine.Engine [cached since 5.213s ago] (5,)
+2025-12-10 15:39:45,879 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     127.0.0.1:54735 - "DELETE /api/reviews/5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54735 - "OPTIONS /api/reviews/4 HTTP/1.1" 200 OK
+2025-12-10 15:39:47,454 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-10 15:39:47,454 INFO sqlalchemy.engine.Engine SELECT review_executions.id, review_executions.pr_url, review_executions.status, review_executions.result, review_executions.metadata_json, review_executions.created_at 
+FROM review_executions 
+WHERE review_executions.id = ?
+2025-12-10 15:39:47,454 INFO sqlalchemy.engine.Engine [cached since 6.792s ago] (4,)
+2025-12-10 15:39:47,454 INFO sqlalchemy.engine.Engine DELETE FROM review_executions WHERE review_executions.id = ?
+2025-12-10 15:39:47,454 INFO sqlalchemy.engine.Engine [cached since 6.789s ago] (4,)
+2025-12-10 15:39:47,455 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     127.0.0.1:54735 - "DELETE /api/reviews/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54735 - "OPTIONS /api/reviews/3 HTTP/1.1" 200 OK
+2025-12-10 15:39:49,939 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-10 15:39:49,939 INFO sqlalchemy.engine.Engine SELECT review_executions.id, review_executions.pr_url, review_executions.status, review_executions.result, review_executions.metadata_json, review_executions.created_at 
+FROM review_executions 
+WHERE review_executions.id = ?
+2025-12-10 15:39:49,939 INFO sqlalchemy.engine.Engine [cached since 9.278s ago] (3,)
+2025-12-10 15:39:49,940 INFO sqlalchemy.engine.Engine DELETE FROM review_executions WHERE review_executions.id = ?
+2025-12-10 15:39:49,940 INFO sqlalchemy.engine.Engine [cached since 9.275s ago] (3,)
+2025-12-10 15:39:49,940 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     127.0.0.1:54735 - "DELETE /api/reviews/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54735 - "OPTIONS /api/reviews/2 HTTP/1.1" 200 OK
+2025-12-10 15:39:51,599 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-10 15:39:51,599 INFO sqlalchemy.engine.Engine SELECT review_executions.id, review_executions.pr_url, review_executions.status, review_executions.result, review_executions.metadata_json, review_executions.created_at 
+FROM review_executions 
+WHERE review_executions.id = ?
+2025-12-10 15:39:51,599 INFO sqlalchemy.engine.Engine [cached since 10.94s ago] (2,)
+2025-12-10 15:39:51,600 INFO sqlalchemy.engine.Engine DELETE FROM review_executions WHERE review_executions.id = ?
+2025-12-10 15:39:51,600 INFO sqlalchemy.engine.Engine [cached since 10.93s ago] (2,)
+2025-12-10 15:39:51,600 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     127.0.0.1:54735 - "DELETE /api/reviews/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54735 - "OPTIONS /api/reviews/1 HTTP/1.1" 200 OK
+2025-12-10 15:39:53,320 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-10 15:39:53,320 INFO sqlalchemy.engine.Engine SELECT review_executions.id, review_executions.pr_url, review_executions.status, review_executions.result, review_executions.metadata_json, review_executions.created_at 
+FROM review_executions 
+WHERE review_executions.id = ?
+2025-12-10 15:39:53,320 INFO sqlalchemy.engine.Engine [cached since 12.66s ago] (1,)
+2025-12-10 15:39:53,321 INFO sqlalchemy.engine.Engine DELETE FROM review_executions WHERE review_executions.id = ?
+2025-12-10 15:39:53,321 INFO sqlalchemy.engine.Engine [cached since 12.66s ago] (1,)
+2025-12-10 15:39:53,322 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     127.0.0.1:54735 - "DELETE /api/reviews/1 HTTP/1.1" 200 OK
+2025-12-10 15:43:37,006 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-10 15:43:37,007 INFO sqlalchemy.engine.Engine SELECT review_executions.id, review_executions.pr_url, review_executions.status, review_executions.result, review_executions.metadata_json, review_executions.created_at 
+FROM review_executions ORDER BY review_executions.created_at DESC
+2025-12-10 15:43:37,007 INFO sqlalchemy.engine.Engine [cached since 269.9s ago] ()
+INFO:     127.0.0.1:55879 - "GET /api/reviews HTTP/1.1" 200 OK
+2025-12-10 15:43:37,008 INFO sqlalchemy.engine.Engine ROLLBACK
+2025-12-10 15:44:04,072 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-10 15:44:04,072 INFO sqlalchemy.engine.Engine SELECT review_executions.id, review_executions.pr_url, review_executions.status, review_executions.result, review_executions.metadata_json, review_executions.created_at 
+FROM review_executions ORDER BY review_executions.created_at DESC
+2025-12-10 15:44:04,072 INFO sqlalchemy.engine.Engine [cached since 296.9s ago] ()
+INFO:     127.0.0.1:56009 - "GET /api/reviews HTTP/1.1" 200 OK
+2025-12-10 15:44:04,073 INFO sqlalchemy.engine.Engine ROLLBACK
+2025-12-10 15:44:08,056 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-10 15:44:08,056 INFO sqlalchemy.engine.Engine SELECT review_executions.id, review_executions.pr_url, review_executions.status, review_executions.result, review_executions.metadata_json, review_executions.created_at 
+FROM review_executions ORDER BY review_executions.created_at DESC
+2025-12-10 15:44:08,056 INFO sqlalchemy.engine.Engine [cached since 300.9s ago] ()
+INFO:     127.0.0.1:56009 - "GET /api/reviews HTTP/1.1" 200 OK
+2025-12-10 15:44:08,058 INFO sqlalchemy.engine.Engine ROLLBACK
+2025-12-10 15:45:04,714 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-10 15:45:04,714 INFO sqlalchemy.engine.Engine SELECT review_executions.id, review_executions.pr_url, review_executions.status, review_executions.result, review_executions.metadata_json, review_executions.created_at 
+FROM review_executions ORDER BY review_executions.created_at DESC
+2025-12-10 15:45:04,714 INFO sqlalchemy.engine.Engine [cached since 357.6s ago] ()
+INFO:     127.0.0.1:56293 - "GET /api/reviews HTTP/1.1" 200 OK
+2025-12-10 15:45:04,715 INFO sqlalchemy.engine.Engine ROLLBACK
+2025-12-10 15:47:53,133 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-10 15:47:53,134 INFO sqlalchemy.engine.Engine SELECT review_executions.id, review_executions.pr_url, review_executions.status, review_executions.result, review_executions.metadata_json, review_executions.created_at 
+FROM review_executions ORDER BY review_executions.created_at DESC
+2025-12-10 15:47:53,134 INFO sqlalchemy.engine.Engine [cached since 526s ago] ()
+INFO:     127.0.0.1:57018 - "GET /api/reviews HTTP/1.1" 200 OK
+2025-12-10 15:47:53,134 INFO sqlalchemy.engine.Engine ROLLBACK
+2025-12-10 15:47:53,135 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-12-10 15:47:53,135 INFO sqlalchemy.engine.Engine SELECT review_executions.id, review_executions.pr_url, review_executions.status, review_executions.result, review_executions.metadata_json, review_executions.created_at 
+FROM review_executions ORDER BY review_executions.created_at DESC
+2025-12-10 15:47:53,135 INFO sqlalchemy.engine.Engine [cached since 526s ago] ()
+INFO:     127.0.0.1:57018 - "GET /api/reviews HTTP/1.1" 200 OK
+2025-12-10 15:47:53,136 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31330]
+INFO:     Stopping reloader process [31284]

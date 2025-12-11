@@ -1,0 +1,11 @@
+
+> frontend@0.0.0 dev
+> vite --port 3101
+
+
+  VITE v7.2.7  ready in 115 ms
+
+  ➜  Local:   http://localhost:3101/
+  ➜  Network: use --host to expose
+3:43:36 PM [vite] (client) page reload index.html
+3:45:04 PM [vite] (client) page reload index.html
